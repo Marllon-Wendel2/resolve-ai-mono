@@ -27,6 +27,16 @@ resolve-ai-mono/
 
 Pré-requisito: Docker + Docker Compose.
 
+Se for a primeira vez clonando o repositório, inicialize os submódulos
+(`backend/` e `front/` ficam vazios sem isso, e o build falha com
+`open Dockerfile: no such file or directory`):
+
+```bash
+git submodule update --init --recursive
+```
+
+Depois suba tudo:
+
 ```bash
 docker compose up --build
 ```
